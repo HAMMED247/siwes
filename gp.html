@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            /* justify-content:center; */
+            /* align-items: center;  */
+            width: 100%;
+            max-height: screen;
+            overflow: hidden;
+            /* background-color: rgba(128, 128, 128, 0.226); */
+            /* margin: 2em; */
+        }
+        .container{
+            /* max-width: 500px; */
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 1em 5em 5em 2em;
+            
+            width: 50%;
+        }
+        
+        .main{
+            /* max-height: 500px; */
+            display: flex;
+            flex-direction: column;
+            /* background-color: aqua; */
+             gap: 1.5em;
+             /* padding: 2em 5em 2em 0.5em; */
+        } 
+        h5{
+            font-size: 10px;
+            font-weight: lighter;
+            color: grey;
+            text-transform: capitalize;
+        }
+        input[type="email"],input[type="password"]{
+            padding: 1em;
+            /* padding-bottom: 0.7em; */
+            /* background-color: rgba(90, 63, 63, 0.219); */
+            border-radius:8px;
+            border:1px solid gainsboro;
+            margin-top: .5em;
+            width: 100%;
+        }
+        .small{
+         display: flex; 
+         justify-content: space-between;
+         gap: 0.5em;
+         font-weight: 400;
+         padding-top: em;
+        }
+        a{
+            font-size: 400;
+            text-decoration: none;
+            padding-left: 1.5em;
+            /* color: darkblue; */
+            
+        }
+        .submit{
+            border-radius: 0.4em;
+            padding: 0.4em;
+            background-color: blue;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+        .submit>a{
+            color: #000;
+            padding-right: 2em;
+        }
+        button{
+            color: rgb(255, 255, 255);
+        }
+        .google-btn{
+            width: 100%;
+            padding: 0.em;
+            /* border: 2px solid rgb(22, 21, 21); */
+            border-radius: 5px;
+            padding-bottom: 0.5em;
+            color: rgb(27, 25, 25);
+             background-color: bisque;
+             
+        }
+        .google-btn>img{
+            width: 22px;
+            height: 20px;
+            margin-right: 2px;
+            margin-top: 0.4em;
+            padding-top: 0.5em;
+        }
+        .register{
+            display: flex;
+           justify-content: space-between;
+
+        }
+        .register{
+            
+            text-transform: capitalize;
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+
+            /* padding-left: 3.4em; */
+        }
+        button{
+            height: 44px;
+            border: none;
+
+        }
+        a:hover{
+       cursor: pointer;
+       text-decoration: underline;
+       /* background-color: chocolate; */
+        }
+        button:hover{
+            background-color: brown;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        
+        }
+        .image-box{
+         width: 50%;
+            /* height: 50%; */
+            background-image: url('/fu.jpg.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        .right{
+            width: 100%;
+            height: 100%;
+        }
+       
+        h4{
+            font-weight: lighter;
+            color: grey;
+        }
+        label{
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+        .one{
+            display: flex;
+            align-items: center;
+            gap: .5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./sk.jpg.jpg" alt="crown">
+        <div class="main">
+            <div class="pad">
+            <h1>welcome back!</h1>
+            <h5>enter to get unlimited access to data & information</h5>
+            </div>
+            <div class="pad">
+                <label for="email">email*</label><br>
+                <input type="email" placeholder="enter your email address" id="mail">
+            </div>
+            <div class="pad">
+                <label for="password">password*</label><br>
+                <input type="password" placeholder="enter password" id="password">
+            </div>
+            <div class="small">
+                <div class="one">
+                <input type="checkbox" remember me>
+                <h4 for="rememberMe">Remember me</h6>
+                </div>
+                <a href="">forgot your password ?</a>
+            </div>
+            <button class="submit"><a href="./mm.html">login</a></button>
+        
+        <button class="google-btn">
+            <img src="./google.jpg" alt="google logo"> sign up with google</button>
+        <div class="register">
+            don't have an account ?<a href="">register here</a>
+        </div>
+        </div>
+    </div>
+    <div class="image-box">
+        <img src="./fu.jpg.jpg" alt="side image" class="right">
+        
+        </div>
+
+
+
+
+
+
+<!-- 
+        <script>
+          let mail =  document.getElementById("mail").value
+
+          localStorage.setItem("email", mail)
+          console.log("mail")
+        </script>
+     -->
+</body>
+</html>

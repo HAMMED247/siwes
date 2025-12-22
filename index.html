@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "Inter", sans-serif;
+        }
+        .topbar{
+            background-color: white;
+            border-bottom:1px solid gray;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .link{
+            display: flex;
+            gap: 1em;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        .logo{
+            font-size: 24px;
+            font-weight: bold;
+        }
+.home{
+    background-color: rgba(12, 12, 143, 0.904);
+    padding: 0.5em;
+    border-radius: 8px;
+    color: white;
+    width: 60px;
+    text-align: center;
+}
+
+/* pseudo-class */
+
+.home:hover{
+   cursor: pointer;
+   background-color:gray;
+}
+
+.sidebar{
+    width: 260px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 2em;
+    background-color: whitesmoke;
+    border-right: 1px solid black;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+a:hover{
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 8px;
+    width: 100%;
+        color: white;
+      
+}
+
+.main{
+    display: flex;
+}
+
+.body{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+nav{
+    height: 50px;
+    width: 100px;
+    /* background-color: red; */
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.link-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+nav a{
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+display:none ;
+/* padding: 0 20px; */
+padding-top: 10px;
+}
+img{
+    width: 50;
+}
+      @media(max-width: 640px){
+        .link-container{
+            /* display: none; */
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            right:-100%;
+            z-index: 10;
+            width: 300px;
+            background-color: blue;
+            transition: 1s ease-out;
+        }
+        nav a{
+            box-sizing: border-box;
+            height: auto;
+            width: 100%;
+            padding: 20px 30px;
+            justify-content: flex-end;
+        }
+        nav{
+            width: 50px;
+        }
+        .open-sidebar-button, .close-sidebar-button{
+            display: block;
+        }
+        #sidebar-active:checked ~ .link-container{
+            /* display:flex ; */
+            right: 0;
+        }
+         #sidebar-active:checked ~ #overlay{
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+         }
+         .sidebar{
+            width: 5%;
+         }
+      }
+    </style>
+</head>
+<body>
+    <!-- topbar -->
+     <div class="topbar">
+        <div class="logo">Olaktech</div>
+
+        <div class="link">
+            <div class="home">home</div>
+            <div class="home">about</div>
+            <div class="home">Skills</div>
+        </div>
+     </div>
+      
+
+     <div class="main">
+     <!-- sidebar -->
+      <div class="sidebar">
+        <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <img src="./images/menu.png" alt="open">
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="link-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <img src="./close - Copy.png" alt="close">
+            </label>
+        
+        
+        <div class="">
+            <a href="./mm.html">Home</a>
+        </div>
+         <div class="">
+            <a href="">Dashboard</a>
+        </div>
+         <div class="">
+            <a href="">About</a>
+        </div>
+         <div class="">
+            <a href="">Settings</a>
+        </div>
+       </div>
+        </nav>
+      </div>
+      
+      <div class="body">
+        my Dashboard page
+      </div>
+      </div>
+</body>
+</html>
