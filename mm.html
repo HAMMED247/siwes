@@ -13,15 +13,20 @@
         }
         .topbar{
             width: 100%;
-             height: 2em;
-             padding: 2em;
+             height: 50px;
+             padding: 1em;
              text-transform: capitalize;
         color: blue;
         background-color: rgba(128, 128, 128, 0.247);
         position: fixed;
-    
+    }
+       .gaas{
+            font-size: 30px;
+        
+            font-weight: 900;
+    }
            
-        }
+        
         .sidebar{
             width: 200px;
             height: 100vh;
@@ -46,15 +51,23 @@
             display: flex;
             flex-direction: column;
             text-transform:capitalize;
-            padding: 2em;
+            padding: 4em;
+        }
+        h1{
+            /* text-transform: uppercase; */
+            font-size: 40px;
+            
+            text-align: center;
         }
         
         span{
-            color: green;
+            color: blue;
         }
         h4{
             text-transform: capitalize;
             padding: 2em;
+            text-align: center;
+            
     
         }
         .join{
@@ -62,6 +75,7 @@
             padding: 0.5em;
             border-radius: 1em;
         }
+        
         .links{
             padding: 0.5em 2rem 0.5em 2rem;
             margin-bottom: 2em;
@@ -76,7 +90,7 @@
             
         }
         .parent{
-            display: grid;
+            display: flex;
             grid-template-columns:repeat(2,1fr);
             justify-content:center; 
             gap: 1em;
@@ -106,7 +120,8 @@
            display: flex;
            border-radius: 8px;        
            color: black;
-           gap: 1em;
+           /* gap: 1em; */
+           /* padding-top: 4em; */
            justify-content: center;
             
         }
@@ -125,11 +140,10 @@
             background-color: white;
         }
         body{
-            align-items: center;
-            
+            /* align-items: center; */
             display: flex;
             flex-direction: column;
-            gap: 2em;
+            /* gap: 2em; */
         }
         h3{
             text-transform:uppercase;
@@ -139,6 +153,7 @@
             display: flex;
             flex-direction: column;
             background-color: blueviolet;
+            /* max-width: 100vh; */
             padding: 3em 9em 5em 1em;
             position: absolute;
             width: 100%;
@@ -150,10 +165,78 @@
             text-transform:capitalize;
             padding-bottom: 1em;
             font-weight:900;
+            font-size: 50px;
+                padding-top: 2em;
         }
         .relariv {
-            width: 80%;
+            width: 100%;
         }
+            .smart{
+                font-size: 14px;
+                padding-top: 3em;
+                color: white;
+            }
+            .hph{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                padding-top: 2em;
+                cursor: pointer;
+            }
+            .spit{
+                font-size: 30px;
+                font-weight: 900;
+                color: white;
+            }
+            .spits{
+                font-size: 18px;
+                color: white;
+            }
+            .you{
+                /* text-align: center; */
+                width: 900px;
+            }
+        @media (max-width:640px){
+            .parent{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .debo{
+                padding: 2em 2em 5em 1em;
+                 position: absolute;
+            width: 100%;
+            top: 67%;
+            z-index: -1;
+            }
+            .smart{
+                font-size: 14px;
+                padding-top: 3em;
+            }
+            .gas{
+                font-size: 20px;
+                padding-top: 4em;
+            }
+            .you{
+                width: 300px;
+            }
+            .container{
+                width: 350px;
+                height: 230px;
+                padding: 1em;
+        }
+        .say{
+            font-size: 15px;
+            text-align: center;
+        }
+        .pad{
+            border-radius: 8px;
+            padding-top: 1.5em;
+        }
+        .relariv{
+            width: 105%;
+        }
+        
+    }
     </style>
 </head>
 <body>
@@ -161,27 +244,15 @@
      <div class="topbar">
         <div class="gaas">gaaS</div>
      </div>
-      <!-- sidebar -->
-       <!-- <div class="sidebar"> -->
-        <!-- <div class="home">why us</div> -->
-        <!-- <div class="home">products</div> -->
-        <!-- <div class="home">services</div> -->
-        
-        <!-- <div class="links"> -->
-          <!-- <button> contact</button> -->
-        </div>
-        <div class="link">
-            <!-- <button>join the waitlist</button> -->
-        </div>
-       </div>
+    
        <div class="body">
        <h1>upgrade your cylinder <span>gas</span></h1>
-         <h4>smartgas empowers you with affordable and clean cooking solutions, to help you enjoy your cooking experience. we bring the gas right to your home, making it convenient and reliable</h4>
+         <h4 class="you">smartgas empowers you with affordable and clean cooking solutions, to help you enjoy your cooking experience. we bring the gas right to your home, making it convenient and reliable</h4>
          <div class="php">
             <div class="join">join the waitlist</div>
          </div>
          <div class="links">
-          <div>how it works</a>
+          <div>how it works</div>
          </div>
       </div> 
       <div class="parent">
@@ -195,7 +266,7 @@
       <div class="relariv" style="position: relative;">
           <div class="container">
             <div class="main">
-            <h3>say goodbye to worries smartGas here to provide a cleaner,healthier,more sustainable cooking fuel for you and your loved ones.</h3>
+            <h3 class="say">say goodbye to worries smartGas here to provide a cleaner,healthier,more sustainable cooking fuel for you and your loved ones.</h3>
             <div class="pad">
                 <div class="house">get started</div>
                 <div class="hous">see how it works</div>
@@ -203,8 +274,20 @@
             </div>
           </div>
           <div class="debo">
-          <p>gaas</p>
-          <h5>smartGAS powered by terraone empowers you with affordable and clean cooking solution, to help you enjoy your cooking experience.we bring the gas right to your home,making it convenient and reliable</h5>
+          <p class="gas">gaas</p>
+          <h5 class="smart">smartGAS powered by terraone empowers you with affordable and clean cooking solution, to help you enjoy your cooking experience.we bring the gas right to your home,making it convenient and reliable</h5>
+          <div class="hph">
+            <div class="spit">product</div>
+            <div class="spits">login</div>
+            <div class="spits">signup</div> 
+             <div class="spits">contact us</div>
+                <div class="spit">useful links</div>
+                <div class="spits">why smartGas</div>
+                <div class="spits">about us</div>
+                <div class="spits">services</div>
+                <div class="spits">policies</div>
+                <div class="spit">newsletter</div>
+          </div>
           </div>
       </div>
 </body>
